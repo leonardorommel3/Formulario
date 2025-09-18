@@ -18,8 +18,6 @@ body {
 textarea.control {
   width: 150px; /* ajusta a lo que necesites */
   height: 120px;
-  resize: vertical;
-  
 }
 
 h1{
