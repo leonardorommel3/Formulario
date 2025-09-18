@@ -15,6 +15,11 @@ body {
   margin: 0; /* elimina espacios por defecto */
 }
 
+textarea.control {
+  height: 120px;
+  resize: vertical;
+}
+
 h1{
   text-align: center;
   margin-bottom:20px;
