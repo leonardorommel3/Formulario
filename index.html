@@ -47,37 +47,71 @@
       <div class="form-group">
         <label for="codigodelequipo">Codigo del equipo</label>
         <select id="codigodelequipo" name="codigodelequipo" required>
-          <option value="" disabled selected hidden>Seleccione el codigo del equipo</option>
-          <option value="Aislador MT">Aislador MT</option>
-          <option value="Bateria MT">Bateria MT</option>
-          <option value="Bornera Secc Rele">Bornera Secc Rele</option>
-          <option value="Celda metalica MT">Celda metalica MT</option>
-          <option value="Celda modular MT">Celda modular MT</option>
-          <option value="Disyuntor">Disyuntor</option>
-          <option value="Equipo Telemando en MT">Equipo Telemando en MT</option>
-          <option value="Est Sub Conv Nivel">Est Sub Conv Nivel</option>
-          <option value="Est Sub Conv Subte">Est Sub Conv Subte</option>
-          <option value="Estructura Cabina (CEPS)">Estructura Cabina (CEPS)</option>
-          <option value="Fusible MT">Fusible MT</option>
-          <option value="Gab pro ctrl red MT">Gab pro ctrl red MT</option>
-          <option value="Interrup Pot Trip MT">Interrup Pot Trip MT</option>
-          <option value="Pararrayo MT">Pararrayo MT</option>
-          <option value="Recloser MT">Recloser MT</option>
-          <option value="Rectf/Cargd Bater MT">Rectf/Cargd Bater MT</option>
-          <option value="Rele en MT">Rele en MT</option>
-          <option value="Secc Pot Trip Int MT">Secc Pot Trip Int MT</option>
-          <option value="Secc Unipolar INT MT">Secc Unipolar INT MT</option>
-          <option value="Sistem Barras BT SED">Sistem Barras BT SED</option>
-          <option value="Sistem Barras MT SED">Sistem Barras MT SED</option>
-          <option value="Sistem Psta Tierr MT">Sistem Psta Tierr MT</option>
-          <option value="Tablero de SED MT">Tablero de SED MT</option>
-          <option value="Termin Int Cables MT">Termin Int Cables</option>
-          <option value="Transf Corrie Pro MT">Transf Corrie Pro MT</option>
-          <option value="Transf Tensio Pro MT">Transf Tensio Pro MT</option>
-          <option value="Transformador Distri">Transformador Distri</option>
-          
+          <option value="" disabled selected hidden>Seleccione el código del equipo</option>
         </select>
       </div>
+  <script>
+  // Relación entre características y códigos de equipo
+  const equiposPorCaracteristica = {
+    "Cabina exterior de proteccion": ["Estructura Cabina (CEPS)", "Gab pro ctrl red MT"],
+    "Cable": ["Termin Int Cables MT", "Sistem Psta Tierr MT"],
+    "Conexion de celda": ["Celda metalica MT", "Celda modular MT"],
+    "Convencional Sub": ["Est Sub Conv Nivel", "Est Sub Conv Subte"],
+    "Interruptor de Potencia": ["Disyuntor", "Interrup Pot Trip MT"],
+    "Recloser": ["Recloser MT"],
+    "Seccionador de potencia interior": ["Secc Pot Trip Int MT", "Secc Unipolar INT MT"]
+  };
+
+  // Lista completa con etiquetas legibles
+  const opcionesEquipos = {
+    "Aislador MT": "Aislador MT",
+    "Bateria MT": "Bateria MT",
+    "Bornera Secc Rele": "Bornera Secc Rele",
+    "Celda metalica MT": "Celda metalica MT",
+    "Celda modular MT": "Celda modular MT",
+    "Disyuntor": "Disyuntor",
+    "Equipo Telemando en MT": "Equipo Telemando en MT",
+    "Est Sub Conv Nivel": "Est Sub Conv Nivel",
+    "Est Sub Conv Subte": "Est Sub Conv Subte",
+    "Estructura Cabina (CEPS)": "Estructura Cabina (CEPS)",
+    "Fusible MT": "Fusible MT",
+    "Gab pro ctrl red MT": "Gab pro ctrl red MT",
+    "Interrup Pot Trip MT": "Interrup Pot Trip MT",
+    "Pararrayo MT": "Pararrayo MT",
+    "Recloser MT": "Recloser MT",
+    "Rectf/Cargd Bater MT": "Rectf/Cargd Bater MT",
+    "Rele en MT": "Rele en MT",
+    "Secc Pot Trip Int MT": "Secc Pot Trip Int MT",
+    "Secc Unipolar INT MT": "Secc Unipolar INT MT",
+    "Sistem Barras BT SED": "Sistem Barras BT SED",
+    "Sistem Barras MT SED": "Sistem Barras MT SED",
+    "Sistem Psta Tierr MT": "Sistem Psta Tierr MT",
+    "Tablero de SED MT": "Tablero de SED MT",
+    "Termin Int Cables MT": "Termin Int Cables MT",
+    "Transf Corrie Pro MT": "Transf Corrie Pro MT",
+    "Transf Tensio Pro MT": "Transf Tensio Pro MT",
+    "Transformador Distri": "Transformador Distri"
+  };
+
+  function filtrarEquipos() {
+    const caracteristica = document.getElementById("caracteristica").value;
+    const equipoSelect = document.getElementById("codigodelequipo");
+
+    // Limpiar select
+    equipoSelect.innerHTML = '<option value="" disabled selected hidden>Seleccione el código del equipo</option>';
+
+    // Obtener códigos asociados
+    const codigos = equiposPorCaracteristica[caracteristica] || [];
+
+    // Agregar opciones al select
+    codigos.forEach(codigo => {
+      const option = document.createElement("option");
+      option.value = codigo;
+      option.textContent = opcionesEquipos[codigo] || codigo;
+      equipoSelect.appendChild(option);
+    });
+  }
+</script>
       
     </form>
     <div id="mensaje" style="margin-top:15px; display:none;"></div>
