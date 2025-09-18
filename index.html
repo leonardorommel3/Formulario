@@ -9,12 +9,24 @@
 </head>
 <body>
   <div class="container">
-    <h1>Inspeccion a celda de transformacon</h1>
+    <h1>Inspeccion a celda de transformacion</h1>
     <form id="registroForm">
       <!-- Fecha automatica -->
       <div class="form-group">
         <label for="fecha">Fecha de registro</label>
         <input type="date" id="fecha" name="fecha" required>
+      </div>
+      <!-- Cuadrilla de trabajo -->
+      <div class="form-group">
+        <label for="grupo">Cuadrilla</label>
+        <select id="grupo" name="grupo" required>
+          <option value="" disabled selected hidden>Seleccione una cuadrilla</option>
+          <option value="Cuadrilla de SSAA - Christian Cirineo">Cuadrilla de Servicios Auxiliares - Christian Cirineo</option>
+          <option value="Cuadrilla de limpieza - Marco Bernal">Cuadrilla de limpieza - Marco Bernal</option>
+          <option value="Cuadrilla de trabajos menores - Edwar Ortega">Cuadrilla de trabajos menores - Edwar Ortega</option>
+          <option value="Cuadrilla de termografía - David Fernandez">Cuadrilla de termografía - David Fernandez</option>
+          <option value="Cuadrilla de emergencia BT - Hugo Espinoza">Cuadrilla de emergencia BT - Hugo Espinoza</option>
+        </select>
       </div>
     </form>
     <div id="mensaje" style="margin-top:15px; display:none;"></div>
