@@ -8,16 +8,14 @@
   <title>Formulario Registro</title>
 </head>
 <body>
-  <section class="form-register">
-    <h4>Formulario Registro</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
-    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-    <input class="botons" type="submit" value="Registrar">
-    <p><a href="#">¿Ya tengo Cuenta?</a></p>
-  </section>
-
+  <div class="container">
+    <h1>Inspeccion a celda de transformacon</h1>
+    <form id="registroForm">
+      <!-- Fecha automatica -->
+      <div class="form-group">
+        <label for="fecha">Fecha de registro</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+    </form>
 </body>
 </html>
