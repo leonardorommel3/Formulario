@@ -29,27 +29,28 @@
           fechaInput.value = fechaHoy;
         });
       </script>
-      <!-- CARACTERISTICA DE LA INSTALACION -->
-      <div class="form-group">
-        <label for="caracteristica">Caracteristica</label>
-        <select id="caracteristica" name="caracteristica" required>
-          <option value="" disabled selected hidden>Seleccione una caracteristica</option>
-          <option value="Cabina exterior de proteccion">Cabina exterior de proteccion</option>
-          <option value="Cable">Cable</option>
-          <option value="Conexion de celda">Conexion de celda</option>
-          <option value="Convencional Sub">Convencional Sub</option>
-          <option value="Interruptor de Potencia">Interruptor de Potencia</option>
-          <option value="Recloser">Recloser</option>
-          <option value="Seccionador de potencia interior">Seccionador de poencia interior</option>
-        </select>
-      </div>
-      <!-- CODIGO DEL EQUIPO -->
-      <div class="form-group">
-        <label for="codigodelequipo">Codigo del equipo</label>
-        <select id="codigodelequipo" name="codigodelequipo" required>
-          <option value="" disabled selected hidden>Seleccione el código del equipo</option>
-        </select>
-      </div>
+<!-- CARACTERISTICA DE LA INSTALACION -->
+  <div class="form-group">
+    <label for="caracteristica">Característica</label>
+    <select id="caracteristica" name="caracteristica" required onchange="filtrarEquipos()">
+      <option value="" disabled selected hidden>Seleccione una característica</option>
+      <option value="Cabina exterior de proteccion">Cabina exterior de proteccion</option>
+      <option value="Cable">Cable</option>
+      <option value="Conexion de celda">Conexion de celda</option>
+      <option value="Convencional Sub">Convencional Sub</option>
+      <option value="Interruptor de Potencia">Interruptor de Potencia</option>
+      <option value="Recloser">Recloser</option>
+      <option value="Seccionador de potencia interior">Seccionador de potencia interior</option>
+    </select>
+  </div>
+
+  <!-- CODIGO DEL EQUIPO -->
+  <div class="form-group">
+    <label for="codigodelequipo">Código del equipo</label>
+    <select id="codigodelequipo" name="codigodelequipo" required>
+      <option value="" disabled selected hidden>Seleccione el código del equipo</option>
+    </select>
+  </div>
   <script>
   // Relación entre características y códigos de equipo
   const equiposPorCaracteristica = {
