@@ -7,17 +7,11 @@
 body {
   background-image: url('fondo.jpg');
 }
-
 .form-container {
-  width: 400px;
-  background: #24303c;
-  padding: 30px;
-  margin: auto;
-  margin-top: 100px;
-  border-radius: 4px;
-  font-family: 'calibri';
-  color: white;
-  box-shadow: 7px 13px 37px #000;
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;      /* Centra verticalmente */
+  margin: 0; /* elimina espacios por defecto */
 }
 
 .form-register h4 {
