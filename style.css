@@ -3,14 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 body {
-  background-image: url('fondo.jpg');
-}
-.form-container {
   display: flex;
   justify-content: center;  /* Centra horizontalmente */
   align-items: center;      /* Centra verticalmente */
+  height: 100vh;            /* Ocupa toda la altura de la ventana */
+  background-image: url('fondo.jpg'); /* tu fondo personalizado */
+  background-size: cover;
+  background-position: center;
   margin: 0; /* elimina espacios por defecto */
 }
 
