@@ -16,6 +16,19 @@
         <label for="fecha">Fecha de registro</label>
         <input type="date" id="fecha" name="fecha" required>
       </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const fechaInput = document.getElementById("fecha");
+          const hoy = new Date();
+          
+          const anio = hoy.getFullYear();
+          const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // 01-12
+          const dia = String(hoy.getDate()).padStart(2, '0');     // 01-31
+          
+          const fechaHoy = `${anio}-${mes}-${dia}`;
+          fechaInput.value = fechaHoy;
+        });
+      </script>
       <!-- Cuadrilla de trabajo -->
       <div class="form-group">
         <label for="grupo">Cuadrilla</label>
