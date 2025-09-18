@@ -38,6 +38,7 @@
       <option value="Cable">Cable</option>
       <option value="Conexion de celda">Conexion de celda</option>
       <option value="Convencional Sub">Convencional Sub</option>
+      <option value="Convencional Super">Convencional Super</option>
       <option value="Interruptor de Potencia">Interruptor de Potencia</option>
       <option value="Recloser">Recloser</option>
       <option value="Seccionador de potencia interior">Seccionador de potencia interior</option>
@@ -54,10 +55,11 @@
 <script>
   // Relación entre características y códigos de equipo
   const equiposPorCaracteristica = {
-    "Cabina exterior de proteccion": ["Estructura Cabina (CEPS)", "Gab pro ctrl red MT"],
+    "Cabina exterior de proteccion": ["Bateria MT","Bornera Secc Rele","Estructura Cabina (CEPS)","Interrup Pot Trip MT","Rectf/Cargd Bater MT","Rele en MT","Sistem Psta Tierr MT", "Transf Corrie Pro MT","Transf Tensio Pro MT"],
     "Cable": ["Termin Int Cables MT", "Sistem Psta Tierr MT"],
-    "Conexion de celda": ["Celda metalica MT", "Celda modular MT"],
-    "Convencional Sub": ["Est Sub Conv Nivel", "Est Sub Conv Subte"],
+    "Conexion de celda": ["Aislador MT", "Celda metalica MT","Celda modular MT","Fusible MT","Interrup Pot Trip MT","Pararrayo MT","Secc Pot Trp Int MT","Secc Unipolar INT MT","Sistem Barras MT SED","Sistem Psta Tierr MT"],
+    "Convencional Sub": ["Celda metalica MT", "Disyuntor", "Est Sub Conv Subte","Fusible MT","Secc Unipolar INT MT","Sistem Barras BT SED","Sistem Barras MT SED","Sistem Psta Tierr MT","Tablero de SED MT","Transformador Distri"],
+    "Convencional Super": ["Disyuntor", "Interrup Pot Trip MT"],
     "Interruptor de Potencia": ["Disyuntor", "Interrup Pot Trip MT"],
     "Recloser": ["Recloser MT"],
     "Seccionador de potencia interior": ["Secc Pot Trip Int MT", "Secc Unipolar INT MT"]
