@@ -21,6 +21,11 @@ textarea.control {
   resize: vertical;
 }
 
+textarea.control label {
+  width: 150px; /* ajusta a lo que necesites */
+  font-weight: bold;
+}
+
 h1{
   text-align: center;
   margin-bottom:20px;
