@@ -39,12 +39,14 @@ h1{
   font-weight: bold;
 }
 
-.form-register .botons {
+button {
+  display: block;
   width: 100%;
-  background: #1f53c5;
-  border: none;
   padding: 12px;
+  background: #007bff;
   color: white;
-  margin: 16px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   font-size: 16px;
 }
