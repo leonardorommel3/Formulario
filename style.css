@@ -31,12 +31,21 @@ h1{
 }
 
 .form-group {
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;      /* Alinea verticalmente */
+  margin-bottom: 20px;      /* Espacio entre campos */
 }
 
 .form-group label {
   width: 150px; /* ajusta a lo que necesites */
   font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  flex: 1;                  /* Ocupa todo el espacio restante */
+  padding: 6px 8px;
+  font-size: 16px;
 }
 
 button {
